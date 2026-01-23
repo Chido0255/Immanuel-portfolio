@@ -1,0 +1,579 @@
+<!-- index.html (updated) -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Immanuels portfolio</title>
+
+  <!-- Optional font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <!-- background layers -->
+    <div class="header-bg" aria-hidden="true"></div>
+    <canvas id="hero-canvas" class="canvas-bg" aria-hidden="true"></canvas>
+
+    <div class="container">
+      <div class="topbar">
+        <a class="logo" href="#" aria-label="Home">
+          <svg class="logo-mark" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" fill="none" stroke="var(--neon-green)" stroke-width="1.8"/>
+            <path d="M6 12h6l2-4" stroke="var(--neon-yellow)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span class="brand-name">Chidozie Immanuel</span>
+        </a>
+
+        <nav class="nav" role="navigation" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu">
+          <span class="hamburger-box">
+            <span class="hamburger-inner" aria-hidden="true"></span>
+          </span>
+        </button>
+      </div>
+
+      <div class="hero">
+        <div class="hero-inner" id="hero-content">
+          <h1 class="hero-title"><span class="glow">Design</span> · <span class="glow">Build</span> · <span class="glow">Innovate</span></h1>
+          <p class="hero-tagline">Animator, Digital artist and front-end developer blending design, code, and bold ideas into engaging digital experiences.</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="#work">See My Work</a>
+            <a class="btn outline" href="#contact">Get In Touch</a>
+          </div>
+        </div>   
+  <!-- RIGHT column: profile image + arc -->
+<div class="hero-right">
+  <div class="hero-profile">
+    <img src="images/face green bg.png" alt="Profile picture of Immanuel" />
+  </div>
+  <svg class="hero-deco" viewBox="0 0 600 100" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="g" x1="0%" x2="100%">
+        <stop offset="0%" stop-color="var(--neon-green)" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="var(--neon-yellow)" stop-opacity="0.6"/>
+      </linearGradient>
+    </defs>
+    <path d="M0 80 C150 10, 450 10, 600 80" stroke="url(#g)" stroke-width="3" fill="none" stroke-linecap="round" />
+  </svg>
+</div>
+
+      </div>
+    </div>
+
+    <div id="primary-navigation" class="mobile-nav" aria-hidden="true">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- about.html -->
+<section id="about" class="about-section" aria-labelledby="about-title">
+  <!-- canvas for topology (animated dots + connecting lines) -->
+  <canvas id="topo-canvas" class="topo-canvas" aria-hidden="true"></canvas>
+
+  <div class="about-container">
+    <!-- LEFT: Intro + leadership mention -->
+    <div class="about-left">
+      <h2 id="about-title" class="section-title">About Me</h2>
+      <p class="about-lead">
+        I'm <strong>Chidozie Immanuel</strong> — a digital artist with over 5 years experience & a multidisciplinary creator and team lead who blends motion, visuals and front-end code to ship immersive experiences. I lead a small focused team, mentor junior animators/developers, and love turning bold ideas into polished productions.
+      </p>
+
+      <ul class="about-highlights" aria-hidden="false">
+        <li><strong>Leading Teams</strong> — mentoring, sprint planning, and creative direction.</li>
+        <li><strong>Cross-discipline</strong> — animation, interactive design, and front-end delivery.</li>
+        <li><strong>Delivery-focused</strong> — prototype → iterate → ship with quality.</li>
+      </ul>
+
+      <div class="about-actions">
+        <a class="btn primary" href="#work">View Projects</a>
+        <a class="btn outline" href="#contact">Contact Me</a>
+      </div>
+    </div>
+
+    <!-- RIGHT: skills visualization -->
+    <div class="about-right" aria-hidden="false">
+      <!-- Rings grid -->
+      <div class="skills-grid" role="list" aria-label="Skills and proficiency">
+        <!-- skill item: data-percent used by JS -->
+        <article class="skill" role="listitem" aria-labelledby="skill-3d">
+          <div class="skill-visual" aria-hidden="true">
+            <!-- SVG circular progress (two concentric rings: background + animated stroke) -->
+            <svg class="ring" viewBox="0 0 100 100" role="img" aria-labelledby="skill-3d-label">
+              <title id="skill-3d-label">3D Animator 99 percent</title>
+              <circle class="ring-bg" cx="50" cy="50" r="40" />
+              <circle class="ring-fg" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2" />
+            </svg>
+            <!-- small icon -->
+            <div class="skill-icon" aria-hidden="true">
+              <!-- simple animator icon (keyframe/star) -->
+              <svg viewBox="0 0 24 24"><path d="M12 2 L14 8 L20 9 L15 13 L16 19 L12 16 L8 19 L9 13 L4 9 L10 8 Z" fill="currentColor"/></svg>
+            </div>
+          </div>
+          <div class="skill-meta">
+            <h3 id="skill-3d" class="skill-name">3D Animator</h3>
+            <div class="skill-percent" data-target="99">0<span class="percent">%</span></div>
+          </div>
+        </article>
+
+        <!-- Repeat for other skills -->
+        <article class="skill" role="listitem" aria-labelledby="skill-music">
+          <div class="skill-visual" aria-hidden="true">
+            <svg class="ring" viewBox="0 0 100 100" role="img" aria-labelledby="skill-music-label">
+              <title id="skill-music-label">Music Creator 87 percent</title>
+              <circle class="ring-bg" cx="50" cy="50" r="40" />
+              <circle class="ring-fg" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2" />
+            </svg>
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z" fill="currentColor"/></svg>
+            </div>
+          </div>
+          <div class="skill-meta">
+            <h3 id="skill-music" class="skill-name">Music Creator</h3>
+            <div class="skill-percent" data-target="87">0<span class="percent">%</span></div>
+          </div>
+        </article>
+
+        <article class="skill" role="listitem" aria-labelledby="skill-graphic">
+          <div class="skill-visual" aria-hidden="true">
+            <svg class="ring" viewBox="0 0 100 100" role="img" aria-labelledby="skill-graphic-label">
+              <title id="skill-graphic-label">Graphic Designer 92 percent</title>
+              <circle class="ring-bg" cx="50" cy="50" r="40" />
+              <circle class="ring-fg" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2" />
+            </svg>
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 3h18v4H3zM3 10h18v11H3z" fill="currentColor"/></svg>
+            </div>
+          </div>
+          <div class="skill-meta">
+            <h3 id="skill-graphic" class="skill-name">Graphic Designer</h3>
+            <div class="skill-percent" data-target="92">0<span class="percent">%</span></div>
+          </div>
+        </article>
+
+        <article class="skill" role="listitem" aria-labelledby="skill-video">
+          <div class="skill-visual" aria-hidden="true">
+            <svg class="ring" viewBox="0 0 100 100" role="img" aria-labelledby="skill-video-label">
+              <title id="skill-video-label">Video Editor 80 percent</title>
+              <circle class="ring-bg" cx="50" cy="50" r="40" />
+              <circle class="ring-fg" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2" />
+            </svg>
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M17 10.5V6c0-1.1-.9-2-2-2H3v12h12c1.1 0 2-.9 2-2v-4.5l4 4v-11l-4 4z" fill="currentColor"/></svg>
+            </div>
+          </div>
+          <div class="skill-meta">
+            <h3 id="skill-video" class="skill-name">Video Editor</h3>
+            <div class="skill-percent" data-target="80">0<span class="percent">%</span></div>
+          </div>
+        </article>
+
+        <article class="skill" role="listitem" aria-labelledby="skill-front">
+          <div class="skill-visual" aria-hidden="true">
+            <svg class="ring" viewBox="0 0 100 100" role="img" aria-labelledby="skill-front-label">
+              <title id="skill-front-label">Front-End Developer 89 percent</title>
+              <circle class="ring-bg" cx="50" cy="50" r="40" />
+              <circle class="ring-fg" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2" />
+            </svg>
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="currentColor"/></svg>
+            </div>
+          </div>
+          <div class="skill-meta">
+            <h3 id="skill-front" class="skill-name">Front-End Developer</h3>
+            <div class="skill-percent" data-target="89">0<span class="percent">%</span></div>
+          </div>
+        </article>
+
+        <article class="skill" role="listitem" aria-labelledby="skill-content">
+          <div class="skill-visual" aria-hidden="true">
+            <svg class="ring" viewBox="0 0 100 100" role="img" aria-labelledby="skill-content-label">
+              <title id="skill-content-label">Content Creator 69 percent</title>
+              <circle class="ring-bg" cx="50" cy="50" r="40" />
+              <circle class="ring-fg" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2" />
+            </svg>
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z" fill="currentColor"/></svg>
+            </div>
+          </div>
+          <div class="skill-meta">
+            <h3 id="skill-content" class="skill-name">Content Creator</h3>
+            <div class="skill-percent" data-target="69">0<span class="percent">%</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="logo-section">
+  <h2>TRUSTED BY</h2>
+  <div class="logo-strip">
+    <img src="images/CU_logocropped-removebg-preview.png" alt="Company 1">
+    <img src="images/Cutts_logo-removebg-preview.png" alt="Company 2">
+    <img src="images/Negeon2-removebg-preview.png" alt="Company 3">
+    <img src="images/learning_on_the_go-removebg-preview.png" alt="Company 4">
+    
+  </div>
+  <div class="linkedin-cta">
+    <a href="https://www.linkedin.com/in/chido0255/" target="_blank" class="btn primary">View My LinkedIn</a>
+    
+  </div>
+</section>
+
+<section id="work" class="work-section">
+  <!-- Particle background -->
+  <canvas id="particles"></canvas>
+
+  <div class="container">
+    <h2 class="section-title">My Work</h2>
+
+    <!-- Filter Buttons -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="animation">3D Animation</button>
+      <button class="filter-btn" data-filter="video">Video Editing</button>
+      <button class="filter-btn" data-filter="music">Music Creation</button>
+      <button class="filter-btn" data-filter="design">Graphic Design</button>
+      <button class="filter-btn" data-filter="frontend">Front-End Dev</button>
+      <button class="filter-btn" data-filter="content">Content Creation</button>
+    </div>
+
+    <!-- Project Grid -->
+    <div class="projects-grid">
+      <!-- Example projects - add or replace thumbnails -->
+      <article class="project-card" data-category="animation">
+        <div class="thumb"><img src="images/sneak peek mutant.png" alt="3D Animation Project"></div>
+        <span class="tag">3D Animation</span>
+        <h3 class="title">Project One</h3>
+        <p class="desc">A cinematic 3D animation demo.</p>
+         <button class="view-btn" data-video="videos/Mutant assault.mp4">View Project</button>
+      </article>
+
+      <article class="project-card" data-category="animation">
+        <div class="thumb"><img src="images/sneak peek anime.png" alt="3D Character"></div>
+        <span class="tag">3D Animation</span>
+        <h3 class="title">Project Two</h3>
+        <p class="desc">Aesthetic environment showcase.</p>
+         <button class="view-btn" data-video="videos/Anime samurai subbed.mp4">View Project</button>
+      </article>
+
+      <article class="project-card" data-category="video">
+        <div class="thumb"><img src="images/Cutts ad cover pic.png" alt="Video Editing"></div>
+        <span class="tag">Video Editing</span>
+        <h3 class="title">Project Three</h3>
+        <p class="desc">High-energy video edit.</p>
+        <button class="view-btn" data-video="videos/Cutts ad Remastered.mp4">View Project</button>
+      </article>
+
+      <article class="project-card" data-category="music">
+        <div class="thumb"><img src="images/Echoes.jpg" alt="Music Project"></div>
+        <span class="tag">Music Creation</span>
+        <h3 class="title">Project Four</h3>
+        <p class="desc">Original soundtrack composition.</p>
+         <button class="view-btn" data-video="videos/Echoes of the Soul.mp4">View Project</button>
+      </article>
+
+      <article class="project-card" data-category="design">
+        <div class="thumb"><img src="images/Immanimators thumbnail.png" alt="Graphic Design"></div>
+        <span class="tag">Graphic Design</span>
+        <h3 class="title">Project Five</h3>
+        <p class="desc">Branding + UI design concept.</p>
+        <button class="view-btn">View Project</button>
+      </article>
+
+      <article class="project-card" data-category="frontend">
+        <div class="thumb"><img src="images/front end dev demo.png" alt="Front-End Dev"></div>
+        <span class="tag">Front-End Dev</span>
+        <h3 class="title">Project Six</h3>
+        <p class="desc">Responsive portfolio template.</p>
+        <button class="view-btn">View Project</button>
+      </article>
+
+      <article class="project-card" data-category="content">
+        <div class="thumb"><img src="images/content creation.png" alt="Content Creation"></div>
+        <span class="tag">Content Creation</span>
+        <h3 class="title">Project Seven</h3>
+        <p class="desc">Social media content strategy.</p>
+        <button class="view-btn">View Project</button>
+      </article>
+
+      <article class="project-card" data-category="music">
+        <div class="thumb"><img src="images/anime dreams.jpg" alt="Music Project 2"></div>
+        <span class="tag">Music Creation</span>
+        <h3 class="title">Project Eight</h3>
+        <p class="desc">Experimental electronic track.</p>
+         <button class="view-btn" data-video="videos/Anime Dreams & Hero Themes.mp4">View Project</button>
+      </article>
+
+
+      <article class="project-card" data-category="video">
+        <div class="thumb"><img src="images/poem poster.png" alt="Video Editing 2"></div>
+        <span class="tag">Video Editing</span>
+        <h3 class="title">Project Nine</h3>
+        <p class="desc">Cinematic short film edit.</p>
+       <button class="view-btn" data-video="videos/Poem left not forgotten SC.mp4.mp4">View Project</button>
+      </article>
+
+    </div>
+  </div>
+  <!-- Modal for video preview -->
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <video id="projectVideo" controls></video>
+  </div>
+</div>
+
+</section>
+<section id="toolkit" class="toolkit-area">
+  <h2 class="section-title">My Toolkit</h2>
+  <canvas id="network-bg"></canvas>
+  <div class="floating-badges">
+    <img src="images/blender-removebg-preview.png" alt="Blender" class="badge">
+    <img src="images/cascadeur-removebg-preview.png" alt="Cascadeur" class="badge">
+    <img src="images/vscode_logo-removebg-preview.png" alt="VS Code" class="badge">
+    <img src="images/HTML_5-removebg-preview.png" alt="HTML5" class="badge">
+    <img src="images/CSS_3-removebg-preview.png" alt="CSS3" class="badge">
+    <img src="images/javascript-removebg-preview.png" alt="JavaScript" class="badge">
+    <img src="images/filmora-removebg-preview.png" alt="Filmora" class="badge">
+    <img src="images/Github-removebg-preview.png" alt="GitHub" class="badge">
+  </div>
+</section>
+<script>
+const canvas = document.getElementById("network-bg");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = document.getElementById("toolkit").offsetHeight;
+}
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+// fewer, slower nodes for mobile performance
+let nodes = Array.from({ length: 25 }, () => ({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  vx: (Math.random() - 0.5) * 0.3,
+  vy: (Math.random() - 0.5) * 0.3
+}));
+
+function drawNetwork() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  ctx.shadowBlur = 15;
+  ctx.shadowColor = "#bfffe5";
+
+  // glowing whitish nodes
+  ctx.fillStyle = "#e8fff8";
+  for (const n of nodes) {
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // subtle connections
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i + 1; j < nodes.length; j++) {
+      const dx = nodes[i].x - nodes[j].x;
+      const dy = nodes[i].y - nodes[j].y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 120) {
+        const alpha = 1 - dist / 120;
+        ctx.strokeStyle = `rgba(190,255,220,${alpha * 0.35})`;
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        ctx.moveTo(nodes[i].x, nodes[i].y);
+        ctx.lineTo(nodes[j].x, nodes[j].y);
+        ctx.stroke();
+      }
+    }
+  }
+
+  // move nodes slowly
+  for (const n of nodes) {
+    n.x += n.vx;
+    n.y += n.vy;
+    if (n.x < 0 || n.x > canvas.width) n.vx *= -1;
+    if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+  }
+
+  requestAnimationFrame(drawNetwork);
+}
+drawNetwork();
+</script>
+
+  <script src="script.js" defer></script>
+
+  <section id="contact" class="contact-section">
+  <div class="contact-bg"></div>
+
+  <h2 class="section-title">Contact Me</h2>
+  <p class="section-subtitle">Let’s bring your ideas to life.</p>
+
+  <div class="contact-container">
+    <div class="contact-cards">
+      <a href="https://wa.me/2348143354844" target="_blank" class="contact-card">
+        <img src="images/whatsapp_logo-removebg-preview.png" alt="WhatsApp" class="contact-icon">
+        <h3>WhatsApp</h3>
+        <p>Chat directly on WhatsApp</p>
+      </a>
+      <a href="mailto:taurus89025@gmail.com" class="contact-card">
+        <img src="images/email_logo-removebg-preview.png" alt="Email" class="contact-icon">
+        <h3>Email</h3>
+        <p>Send me an email</p>
+      </a>
+      <a href="tel:+2348143354844" class="contact-card">
+        <img src="images/phone-removebg-preview.png" alt="Phone" class="contact-icon">
+        <h3>Phone</h3>
+        <p>Give me a call</p>
+      </a>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/mdkwjoqd" method="POST">
+  <h3 class="form-title">Send a Request</h3>
+  <input type="text" name="name" placeholder="Your Name / Brand" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit" class="submit-btn">Send Message</button>
+</form>
+<script>
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  });
+  if (response.ok) {
+    form.reset();
+    document.getElementById('success-message').style.display = 'block';
+  }
+});
+</script>
+  </div>
+</section>
+<!-- Floating Neon Hire Beacon -->
+<a href="https://wa.me/2348143354844" target="_blank" class="hire-beacon">
+  <div class="hire-text">
+    <span>I'M</span>
+    <span>AVAILABLE</span>
+    <span>FOR HIRE</span>
+  </div>
+</a>
+<footer class="footer">
+  <div class="footer-container">
+    <h2 class="footer-title">Chidozie Immanuel</h2>
+    <p class="footer-subtext">Bringing ideas to life through code, art, and animation.</p>
+
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@IMMArokz-vm6vv" target="_blank" class="icon-link">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" />
+      </a>
+      <a href="github.com/Chido0255" target="_blank" class="icon-link">
+        <img src="images/Github-removebg-preview.png" alt="GitHub" />
+      </a>
+      <a href="https://instagram.com/YOUR_USERNAME" target="_blank" class="icon-link">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://wa.me/08143354844" target="_blank" class="icon-link">
+        <img src="images/whatsapp_logo-removebg-preview.png" alt="WhatsApp" />
+      </a>
+    </div>
+
+    <p class="footer-copy">© 2025 Chidozie Immanuel. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+.footer {
+  width: 100%;
+  background: rgba(104, 116, 105, 0.63);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(57, 133, 38, 0.651);
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  height: 60%; /* Shorter footer */
+  animation: footerFade 2.5s ease-in-out forwards;
+  box-shadow: 0 0 20px rgba(0, 255, 85, 0.15);
+}
+
+@keyframes footerFade {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+    box-shadow: 0 0 0 rgba(0, 255, 85, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 0 30px rgba(0, 255, 85, 0.3);
+  }
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-size: 2rem;
+  color: #00ff6a;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-subtext {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.icon-link img {
+  width: 30px;
+  height: 30px;
+  filter: invert(70%) sepia(90%) saturate(400%) hue-rotate(85deg) brightness(120%);
+  transition: all 0.3s ease;
+}
+
+.icon-link:hover img {
+  transform: scale(1.2);
+  filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(90deg) brightness(150%);
+}
+
+.footer-copy {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+</style>
+
+</style>
+
+</body>
+</html>
+ 
